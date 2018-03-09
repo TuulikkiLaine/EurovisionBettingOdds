@@ -1,6 +1,8 @@
 # EurovisionBettingOdds
 
-App to show Eurovision Song Contest betting odds in percentage form.
+Crawler bot that scrapes Eurovision Song Contest betting odds and shows the avergage odds in percentage form.
+
+Data source: eurovisionworld.com
 
 Back-end: Python + Flask
 Front-end: AngularJS
