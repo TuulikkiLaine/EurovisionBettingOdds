@@ -1,6 +1,6 @@
 # EurovisionBettingOdds
 
-Crawler bot that scrapes Eurovision Song Contest betting odds and shows the avergage odds in percentage form.
+Crawler bot that scrapes Eurovision Song Contest betting odds and shows the average odds in percentage form.
 
 Data source: eurovisionworld.com
 
