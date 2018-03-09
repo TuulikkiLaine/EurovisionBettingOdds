@@ -1,0 +1,62 @@
+body {
+  font-family: 'Alegreya Sans SC', sans-serif; }
+
+h1 {
+  text-align: center; }
+
+.beta-flag {
+  position: fixed;
+  font-size: 14px;
+  background: #99cc00;
+  color: #fff;
+  top: 0;
+  left: 0;
+  padding: 3px; }
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto; }
+
+.odds_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  @media (max-width: 360px) {
+    .odds_wrapper {
+      justify-content: flex-start; } }
+
+.odds_table__item {
+  display: flex;
+  margin-bottom: 20px; }
+  .odds_table__item--country {
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-position: center; }
+    @media (max-width: 360px) {
+      .odds_table__item--country {
+        width: 160px;
+        height: 120px; } }
+    .odds_table__item--country h3 {
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      margin-left: 5px;
+      margin-top: 5px;
+      display: inline-block;
+      padding: 5px 10px; }
+  .odds_table__item--odds {
+    align-self: center;
+    padding-left: 15px;
+    font-size: 24px; }
+  .odds_table__item:nth-child(2) .odds_table__item--country {
+    width: 240px;
+    height: 180px; }
+    @media (max-width: 360px) {
+      .odds_table__item:nth-child(2) .odds_table__item--country {
+        width: 200px;
+        height: 150px; } }
+
+/*# sourceMappingURL=main.css.map */

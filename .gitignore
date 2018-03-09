@@ -1,0 +1,12 @@
+lib/
+include/
+bin/
+static/img/
+
+distribute_setup.py
+get-pip.py
+pip-selfcheck.json
+.Python
+.DS_Store
+
+._*

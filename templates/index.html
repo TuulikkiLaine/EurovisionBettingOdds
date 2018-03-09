@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="beta-flag">BETA</div>
+<h1>Eurovision Song Contest Betting Odds</h1>
+<div class="intro"><p>Based on average betting odds from <a target="_blank" href="https://eurovisionworld.com/odds/eurovision">Eurovisionworld.com</a>. <p>Odds update every two hours.</p> Made by <a target="_blank" href="https://github.com/TuulikkiLaine/">Tuulikki Laine</a>.</p></div>
+<div class="odds_wrapper" ng-controller="odds_table">
+<div class="odds_table">
+    <h2>To win Eurovision song contest:</h2>
+<div class="odds_table__item" ng-repeat="item in data">
+    <div style="background-image:url('static/img/{a item.image a}.jpg')" class="odds_table__item--country"><h3>{a item.country a}</h3></div> 
+    <div class="odds_table__item--odds"> {a item.odds a} </div>
+</div>
+</div>
+<div class="odds_table">
+    <h2>To be in top 10:</h2>
+        <div class="odds_table__item" ng-repeat="item in data_top10">
+                <div style="background-image:url('static/img/{a item.image a}.jpg')" class="odds_table__item--country"><h3>{a item.country a}</h3></div> 
+                <div class="odds_table__item--odds"> {a item.odds a} </div>
+            </div>
+</div>
+<div class="odds_table">
+        <h2>To qualify from semifinal 1:</h2>
+            <div class="odds_table__item" ng-repeat="item in data_semi1">
+                    <div style="background-image:url('static/img/{a item.image a}.jpg')" class="odds_table__item--country"><h3>{a item.country a}</h3></div> 
+                    <div class="odds_table__item--odds"> {a item.odds a} </div>
+                </div>
+    </div>
+    <div class="odds_table">
+            <h2>To qualify from semifinal 2:</h2>
+                <div class="odds_table__item" ng-repeat="item in data_semi2">
+                        <div style="background-image:url('static/img/{a item.image a}.jpg')" class="odds_table__item--country"><h3>{a item.country a}</h3></div> 
+                        <div class="odds_table__item--odds"> {a item.odds a} </div>
+                    </div>
+        </div>
+</div>
+{% endblock %}
