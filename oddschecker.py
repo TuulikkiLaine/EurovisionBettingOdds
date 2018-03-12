@@ -33,17 +33,15 @@ def fetch(url):
 #Only fetch new data if data is older than 2 hours
 datasets = [['static/data.json','https://eurovisionworld.com/odds/eurovision'],['static/data-top10.json','https://eurovisionworld.com/odds/eurovision-top-10'],['static/data-semi1.json','https://eurovisionworld.com/odds/eurovision-semi-final-1'],['static/data-semi2.json','https://eurovisionworld.com/odds/eurovision-semi-final-2']]
 
-for dataset in datasets:
-    file_mod_time = os.stat(dataset[0]).st_mtime
-    last_time = (time.time() - file_mod_time) / 360
-    if last_time > 2:
-        data = fetch(dataset[1])
-        with io.open(dataset[0], 'w', encoding='utf-8') as f:
-            f.write(json.dumps(data, ensure_ascii=False))
-
 @app.route('/eurovision')
 def render_home():
-    #print last_time
+    for dataset in datasets:
+        file_mod_time = os.stat(dataset[0]).st_mtime
+        last_time = (time.time() - file_mod_time) / 360
+        if last_time > 2:
+            data = fetch(dataset[1])
+            with io.open(dataset[0], 'w', encoding='utf-8') as f:
+                f.write(json.dumps(data, ensure_ascii=False))
     return render_template('index.html')
 
 @app.route('/')
